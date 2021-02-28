@@ -1,0 +1,24 @@
+body {
+    line-height: var(--line-height-body);
+    font-family: var(--font-family-base, $font-family-base);
+}
+
+h1,.h1,
+h2,.h2,
+h3,.h3 {
+    line-height: var(--line-height-heading);
+}
+
+h1,
+.h1 {
+    line-height: 1.2;
+    font-size: var(--size-700, $size-700);
+}
+
+h2 {
+    font-size: var(--size-600, $size-600);
+}
+  
+h3 {
+    font-size: var(--size-500, $size-500);
+}

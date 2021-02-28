@@ -1,0 +1,19 @@
+.site-header {
+    // background: orange;
+    padding-top: size('400');
+    padding-bottom: size('400');
+    
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    &__brand {
+        color: color("text");
+        text-decoration: none;
+        font-size: size("500");
+        margin-right: 1.5rem;
+    }
+}   

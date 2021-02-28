@@ -1,0 +1,55 @@
+.nav {
+    margin-left: -1rem;
+    margin-right: -1rem;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        & > * {
+            margin-left: .5rem;
+            margin-right: .5rem;
+        }
+        
+        a {
+            position: relative;
+            color: color("text");
+            text-align: center;
+            display: block;
+            padding: .5em;
+            text-decoration: none;
+
+            &::before {
+                position: absolute;
+                bottom: .5rem;
+                left: 0;
+                content: '';
+                display: block;
+                height: 1.5rem;
+                width: 0%;
+                transition: width .2s;
+                z-index: -1;
+            }
+
+            &[aria-current="page"] {
+                font-weight: 700;
+            }
+
+            &[aria-current="page"]::before {
+                background: rgb(color("primary"), 0.4);
+                transform: rotate(-3deg);
+                transform-origin: center;
+                width: 100%;
+            }
+
+            &:hover:not([aria-current="page"])::before {
+                background: rgb(#BCCCDC,0.5);
+                transform: rotate(-3deg);
+                transform-origin: center;
+                width: 100%;
+            }
+        }
+    }
+}

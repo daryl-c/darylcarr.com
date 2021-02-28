@@ -1,0 +1,22 @@
+body {
+    color: var(--color-text, $color-text);
+    background-color: var(--color-background, $color-background);
+}
+
+ul[role="list"] {
+    padding-left: 0;
+}
+
+main[tabindex="-1"] {
+    outline: none;
+}
+
+:focus {
+    outline: 2px dashed;
+    outline-offset: 0.25rem;
+}
+
+::selection {
+    color: var(--color-background, $color-background);
+    background: rgba($color-text, 0.99);
+}

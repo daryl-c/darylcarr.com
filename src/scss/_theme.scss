@@ -1,0 +1,64 @@
+// Colours
+$color-primary: #3EBD93 !default;
+$color-accent: #2680C2 !default;
+$color-dark: #102A43 !default;
+$color-light: #FFF7F8 !default;
+$color-white: #fff !default;
+
+$color-text: $color-dark !default;
+$color-background: $color-white !default;
+
+$colors: (
+    "primary": $color-primary,
+    "accent": $color-accent,
+    "dark": $color-dark,
+    "light": $color-light,
+    "text": $color-text,
+    "background": $color-background,
+    "white": $color-white
+);
+
+// Size scale
+$size-300: 0.75rem !default;
+$size-400: 1rem !default;
+$size-500: 1.33rem !default;
+$size-600: 1.77rem !default;
+$size-700: 2.36rem !default;
+$size-800: 3.15rem !default;
+$size-900: 4.2rem !default;
+
+$sizes: (
+    "300": $size-300,
+    "400": $size-400,
+    "500": $size-500,
+    "600": $size-600,
+    "700": $size-700,
+    "800": $size-800,
+    "900": $size-900,
+);
+
+// Font styles
+$font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !default;
+$font-family-base: "Montserrat";
+$strong-font-weight: 500 !default;
+$line-height-body: 1.5;
+$line-height-heading: 1.2;
+
+// Misc
+$border-radius: 8px !default;
+
+:root {
+    @each $key, $color in $colors {
+        --color-#{key}: #{color};
+    }
+
+    @each $key, $size in $sizes {
+        --size-#{key}: #{size};
+    }
+    
+    --font-family-base: #{$font-family-base};
+    --border-radius: $border-radius;
+
+    --line-height-body: #{$line-height-body};
+    --line-height-heading: #{$line-height-heading};
+}
