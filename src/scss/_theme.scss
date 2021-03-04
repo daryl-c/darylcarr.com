@@ -45,15 +45,26 @@ $line-height-body: 1.5;
 $line-height-heading: 1.2;
 
 // Misc
-$border-radius: 8px !default;
+$border-radius: 4px !default;
+
+// Breakpoints
+$tab-port: 37.5em !default;
+$tab-land: 56.25em !default;
+$desktop-small: 75em !default;
+
+$breakpoints: (
+    "tab-port": $tab-port,
+    "tab-land": $tab-land,
+    "desktop-smal'": $desktop-small
+);
 
 :root {
     @each $key, $color in $colors {
-        --color-#{key}: #{color};
+        --color-#{$key}: #{$color};
     }
 
     @each $key, $size in $sizes {
-        --size-#{key}: #{size};
+        --size-#{$key}: #{$size};
     }
     
     --font-family-base: #{$font-family-base};

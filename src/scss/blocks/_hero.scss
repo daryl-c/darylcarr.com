@@ -1,0 +1,9 @@
+.hero {
+    @include media-query("tab-port") {
+        padding-top: size("300");
+    }
+
+    @include media-query("desktop-small") {
+        padding-top: size("600");
+    }
+}

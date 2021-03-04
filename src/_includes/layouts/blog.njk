@@ -1,0 +1,19 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+    <section class="hero">
+        <div class="wrapper">
+            <h1 class="hero__title">Posts I've wrote</h1>
+        </div>
+    </section>
+    <section class="posts">
+        <div class="wrapper">
+            <div class="featured-post">
+                {% set post = posts[0] %}
+                {% include "partials/post-card.njk" %}
+            </div>
+             {% set postListItems = posts.slice(1) %}
+             {% include "partials/post-list.njk" %}
+        </div>
+    </section>
+{% endblock content %}

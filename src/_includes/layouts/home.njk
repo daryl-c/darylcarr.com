@@ -3,14 +3,16 @@
 {% block content %}
     <section class="hero">
         <div class="wrapper">
-            <h1 class="hero__title">WEB DEV</h1>
+            <h1 class="hero__title">Learning, writing and creating with serverless and the JAMstack</h1>
         </div>
     </section>
-    <div class="wrapper">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, deserunt.</p>
-        <h2>Lorem ipsum dolor sit.</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, magnam assumenda. Facere quibusdam inventore impedit molestias tempora! Deleniti est porro delectus ad error praesentium quisquam. Enim facilis odio earum quia.</p>
-        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem sapiente atque eaque repellat nemo optio facilis aliquid laudantium alias deleniti ullam, reiciendis, voluptates perspiciatis, ab esse mollitia.</p>
-    </div>
+    <section class="posts">
+        <div class="wrapper">
+            <div class="posts__inner">
+                <h2>Writing</h2>
+                {% set postListItems = posts %}
+                {% include "partials/post-list.njk" %}
+            </div>
+        </div>
+    </section>
 {% endblock content %}

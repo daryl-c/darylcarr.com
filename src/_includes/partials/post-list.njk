@@ -1,0 +1,11 @@
+{% if postListHeadline %}
+<h2>{{ postListHeadline }}</h2>
+{% endif %}
+<ul class="post-list" role="list">
+    {% for item in postListItems %}
+        <li>
+            {% set post = item %}
+            {% include "partials/post-card.njk" %}
+        </li>
+    {% endfor %}
+</ul>

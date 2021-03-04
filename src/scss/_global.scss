@@ -12,7 +12,7 @@ main[tabindex="-1"] {
 }
 
 :focus {
-    outline: 2px dashed;
+    outline: 2px dashed $color-primary;
     outline-offset: 0.25rem;
 }
 

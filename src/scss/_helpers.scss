@@ -5,3 +5,15 @@
 @function size($key) {
     @return map-get($sizes, $key);
 }
+
+@mixin media-query($size) {
+    @if $size == tab-port {
+      @media (min-width: $tab-port) { @content; }
+    } @else if $size == tab-land {
+      @media (min-width: $tab-land) { @content; }
+    } @else if $size == desktop-small {
+      @media (min-width: $desktop-small) { @content; }
+    } @else {
+        @error "Breakpoint [#{$size}] is an unsupported breakpoint.";
+    }
+  }

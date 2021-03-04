@@ -19,20 +19,13 @@
         <div class="wrapper">
             <div class="site-header__inner">
                 <a class="site-header__brand" href="/">Daryl Carr</a>
-                <nav class="nav">
+                <nav class="nav" aria-label="primary">
                     <ul class="nav__list" role="list">
+                        {% for item in navigation.items %}
                         <li>
-                            <a href="/" aria-current="page">Home</a>
+                            <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }} >{{ item.text }}</a>
                         </li>
-                        <li>
-                            <a href="/articles">Articles</a>
-                        </li>
-                        <li>
-                            <a href="/about">About</a>
-                        </li>
-                        <li>
-                            <a href="/contact">Contact</a>
-                        </li>
+                        {% endfor %}
                     </ul>
                 </nav>            
             </div>
@@ -43,7 +36,12 @@
     </main>
     <footer class="site-footer">
         <div class="wrapper">
-            <p>FOOTER</p>
+            <p>&copy; 2021 Daryl Carr</p>
+            <nav class="secondary">
+                <ul role="list">
+                    
+                </ul>
+            </nav>
         </div>
     </footer>
 </body>

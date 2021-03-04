@@ -1,5 +1,10 @@
 .site-footer {
-    background: yellow;
+    background: var(--color-dark, $color-dark);
+    color: var(--color-light, $color-light);
     padding-top: size('400');
     padding-bottom: size('400');
+
+    p {
+        font-size: var(--size-400, $size-400);
+    }
 }

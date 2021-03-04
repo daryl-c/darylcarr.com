@@ -29,6 +29,11 @@
 
 @import "utils/wrapper";
 
+@import "blocks/hero";
+@import "blocks/post-card";
+@import "blocks/post-list";
 @import "blocks/nav";
 @import "blocks/site-header";
 @import "blocks/site-footer";
+
+@import "pages/home.scss";
