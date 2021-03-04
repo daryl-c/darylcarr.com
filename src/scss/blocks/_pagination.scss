@@ -1,0 +1,13 @@
+.pagination {
+    padding-top: size("600");
+    padding-bottom: size("600");
+
+    [data-direction="backwards"] {
+        margin-right: size("400");
+    }
+
+    @include media-query("tab-port") {
+        padding-top: size("800");
+        padding-bottom: size("800"); 
+    }
+}

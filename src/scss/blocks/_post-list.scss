@@ -1,10 +1,9 @@
 .post-list {
-    padding-top: size("700");
-    padding-bottom: size("700");
-
     > li {
-        margin-bottom: size("700");
         max-width: 70ch;
+        & + li {
+            margin-bottom: size("700");
+        }
     }
 
     @include media-query("tab-port") {

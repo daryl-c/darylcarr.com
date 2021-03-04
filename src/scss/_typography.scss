@@ -6,7 +6,6 @@ body {
 h1,.h1,
 h2,.h2,
 h3,.h3 {
-    font-family: "Georgia";
     line-height: var(--line-height-heading);
     margin-bottom: .75em;
 }
@@ -43,8 +42,8 @@ h3 {
     }
 }
 
-p, li {
-    font-size: var(--size-5400, $size-400);
+p, li, a {
+    font-size: var(--size-400, $size-400);
 
     @include media-query("tab-port") {
         font-size: var(--size-500, $size-500);
@@ -53,4 +52,8 @@ p, li {
 
 p {
     margin-bottom: .75em;
+}
+
+a {
+    color: currentColor;
 }

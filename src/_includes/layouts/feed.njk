@@ -1,0 +1,31 @@
+{% extends "layouts/base.njk" %}
+
+{% set pageHeaderTitle = title %}
+{% set pageIntro = intro %}
+
+{% set postListItems = pagination.items %}
+
+{% if tag %}
+  {% set postListItems = collections[tag] %}
+{% endif %}
+
+{% block content %}
+    <section class="hero">
+        <div class="wrapper">
+            <h1 class="hero__title">{{ pageHeaderTitle }}{% if tag %} about "<span class="hero__title-highlight">{{ tag }}</span>"{% endif %}</h1>
+        </div>
+    </section>
+    <section class="posts">
+        <div class="wrapper">
+            <div class="featured-post">
+                {% set post = postListItems[0].data %}
+                {% include "partials/post-card.njk" %}
+            </div>
+            {% set postListItems = postListItems.slice(1) %}
+            {% include "partials/post-list.njk" %}
+        </div>
+        {% if not tag %}
+            {% include "partials/pagination.njk" %}
+        {% endif %}
+    </section>
+{% endblock content %}

@@ -1,7 +1,7 @@
 {
   "name": "darylcarr.com",
   "version": "1.0.0",
-  "description": "Personal site of Daryl Carr",
+  "summary": "Personal site of Daryl Carr",
   "main": "index.js",
   "scripts": {
     "watch:sass": "sass --no-source-map --watch src/scss:dist/css",

@@ -33,11 +33,13 @@
                 z-index: -1;
             }
 
-            &[aria-current="page"] {
+            &[aria-current="page"],
+            &[data-state="active"] {
                 font-weight: 700;
             }
 
-            &[aria-current="page"]::before {
+            &[aria-current="page"]::before,
+            &[data-state="active"]::before {
                 background: rgb(color("primary"), 0.4);
                 transform: rotate(-3deg);
                 width: 100%;

@@ -10,7 +10,7 @@
         <div class="wrapper">
             <div class="posts__inner">
                 <h2>Writing</h2>
-                {% set postListItems = posts %}
+                {% set postListItems = collections.blog.slice(0, 6) %}
                 {% include "partials/post-list.njk" %}
             </div>
         </div>
