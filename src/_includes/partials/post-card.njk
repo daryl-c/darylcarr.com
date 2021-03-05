@@ -3,7 +3,7 @@
         <img width="1600" height="900" src="{{ post.heroImageUrl }}" alt="{{ post.heroImageAlt }}" />
     </div>
     <div class="post-card__content">
-        <h3><a href="/posts/{{ post.slug }}/">{{ post.title }}</a></h3>
+        <h3><a href="/blog/{{ post.slug }}/">{{ post.title }}</a></h3>
         <p>{{ post.summary }}</p>
         {% if post.tags.length > 0%}
             <ul role="list" class="post-card__tag-list">

@@ -1,9 +1,17 @@
 .pagination {
     padding-top: size("600");
     padding-bottom: size("600");
+    
+    &__inner {
+        max-width: 30ch;
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-    [data-direction="backwards"] {
-        margin-right: size("400");
+    [data-direction="backwards"] + [data-direction="forwards"] {
+        margin-left: auto;
     }
 
     @include media-query("tab-port") {

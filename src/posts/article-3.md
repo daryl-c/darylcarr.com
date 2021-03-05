@@ -8,5 +8,5 @@ heroImageAlt: "Random Image"
 readingTime: 9
 tags:
     - serverless
-    - aws
+    - AWS
 ---

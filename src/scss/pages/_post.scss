@@ -1,0 +1,80 @@
+.post {
+    --flow-space: var(--size-700);
+
+    &__inner {
+
+        max-width: 70ch;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        background: $color-background;
+        position: relative;
+        border-radius: $border-radius;
+
+        @media (min-width: $tab-land) {
+            box-sizing: content-box;
+            padding: 3em;
+            margin-top: -8rem;
+        }
+    }
+
+
+
+
+    &__tags-list {
+        display: flex;
+
+        * + * {
+            margin-left: size("400");
+            margin-bottom: size("400");
+        }
+
+        padding-bottom: size("500");
+    }
+
+    @media (min-width: 45em) {
+        h1 {
+            font-size: var(--size-900);
+        }
+    
+        h2 {
+            font-size: var(--size-700);
+        }
+    
+        p {
+            font-size: var(--size-500);
+        }
+    
+        figcaption {
+            font-size: var(--size-400);
+        }
+    
+        blockquote p {
+            font-size: var(--size-600);
+        }
+    
+        .post time {
+            font-size: var(--size-600);
+        }
+    }
+
+    time {
+        --flow-space: var(--size-400);
+        display: block;
+    }
+
+    :is(h2, h3) {
+        --flow-space: var(--size-900);
+    }
+
+    :is(h2, h3) + * {
+        --flow-space: var(--size-400);
+    }
+
+    figure,
+    figure + * {
+        --flow-space: var(--size-900);
+    }
+}
