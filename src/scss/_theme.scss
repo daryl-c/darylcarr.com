@@ -1,9 +1,10 @@
 // Colours
 $color-yellow: #FFD300;
-$color-pink: #DE38C8;
-$color-purple-light: #652EC7;
-$color-purple-dark: #33135C;
-$color-blue-dark: #102A43;
+$color-pink: #FF2079;
+$color-purple: #E92EFB;
+$color-blue: #440BD4;
+$color-blue-dark: #04005E;
+
 
 $color-neutral-100: #F5F7FA;
 $color-neutral-200: #E4E7EB;
@@ -16,14 +17,16 @@ $color-neutral-800: #3E4C59;
 $color-neutral-900: #323F4B;
 $color-neutral-1000: #1F2933;
 
-$color-primary: #3EBD93 !default;
-$color-accent: #2680C2 !default;
+$color-primary: $color-blue;
+$color-primary-shade: $color-blue-dark;
+$color-secondary: $color-pink;
+$color-tertiary: $color-yellow;
 $color-text: $color-neutral-1000;
 $color-background: $color-neutral-100 !default;
 
 $colors: (
     "primary": $color-primary,
-    "accent": $color-accent,
+    "secondary": $color-secondary,
     "text": $color-text,
     "background": $color-background,
 );
@@ -74,15 +77,50 @@ $breakpoints: (
     --flow-space: #{$size-500};
 }
 
-
 .color-primary {
-    color: $color-purple-light;
+    color: $color-primary;
+}
+
+.color-primary-shade {
+    color: $color-primary-shade;
 }
 
 .color-secondary {
-    color: #FF2079;
+    color: $color-secondary;
 }
 
-.color-accent {
-    
+.color-tertiary {
+    color: $color-tertiary;
+}
+
+.color-text {
+    color: $color-neutral-1000;
+}
+
+.color-background {
+    color: $color-neutral-100;
+}
+
+.bg-primary {
+    background: $color-primary;
+}
+
+.bg-primary-shade {
+    background: $color-primary-shade;
+}
+
+.bg-secondary {
+    background: $color-secondary;
+}
+
+.bg-tertiary {
+    background: $color-tertiary;
+}
+
+.bg-text {
+    background: $color-neutral-1000;
+}
+
+.bg-background {
+    background: $color-neutral-100;
 }

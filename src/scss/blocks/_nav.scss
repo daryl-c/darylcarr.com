@@ -1,3 +1,7 @@
 .nav {
-    
+    &__list {
+        @include media-query("tab-port") {
+            display: flex;
+        }
+    }
 }

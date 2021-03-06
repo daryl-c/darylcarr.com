@@ -12,17 +12,37 @@
                 <li>Digging into web fundamentals</li>
                 <li>How to build and run successful software products</li>
             </ul>
-            <p>I'll be <em class="color-secondary">exploring ideas, making mistakes and having fun...</em> hopefully. I don't have the answers but I'm looking forward to sharing what I learn as I go.</p>
+            <p>I'll be <em class="color-secondary">exploring ideas, making mistakes and having fun... hopefully</em>. I don't have the answers but I'm looking forward to sharing what I learn as I go.</p>
             <p>Thanks for visiting,</p>
             <p class="signature">Daryl</p>
         </div>  
     </div>
 </section>
-<section class="posts panel">
+<section class="posts panel bg-tertiary">
     <div class="wrapper">
         <div class="posts__inner">
-            <h2>Favourite posts</h2>
-            <p>A list of a a few selected posts go here</p>
+            <h2 class="posts__title">Favourite posts</h2>
+            <p>These are some of personal favourites!</p>
+            <ul role="list" class="posts__list flow">
+                {% for post in collections.featuredPosts %}
+                    <li class="posts__list-item">
+                        <article class="post-preview">
+                            <header class="post-preview__header">
+                                <h3>
+                                    <a class="post-preview__title color-text" href="/blog/{{ post.data.slug }}/">{{ post.data.title }}</a>
+                                </h3>
+                            </header>
+                            <p class="post-preview__summary">{{ post.data.summary }}</p>
+                            <footer>
+                                {% for tag in post.data.tags %}
+                                    <a href="/category/{{ tag }}/" class="post-preview__tag color-text">{{ tag }}</a>
+                                {% endfor %}                            
+                            </footer>
+                        </article>
+                    </li>
+                {% endfor %}
+            </ul>
+            <a class="posts__link-more" href="/blog/">More posts &rarr;</a>
         </div>
     </div>
 </section>

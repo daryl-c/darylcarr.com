@@ -1,3 +1,17 @@
 .site-footer {
-   
+    padding-top: size("400");
+    padding-bottom: size("400");
+
+    &__inner {
+        @include media-query("tab-port") {
+            padding-bottom: size("400");
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
 }

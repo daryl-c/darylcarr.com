@@ -30,12 +30,24 @@
 @import "utils/visually-hidden";
 @import "utils/wrapper";
 
+@import "blocks/post-preview";
 @import "blocks/nav";
+@import "blocks/signature";
 @import "blocks/site-header";
 @import "blocks/site-footer";
 
-.signature {
-    font-family: 'Homemade Apple', cursive;
-    font-size: 3rem;
-    color: $color-purple-dark;
+.posts {
+    &__title {
+        padding-top: .1em;
+        padding-bottom: .1em;
+    }
+
+    &__list[role="list"] {
+        padding-top: size("500");
+    }
+
+    &__link-more {
+        display: block;
+        margin-top: size("500");
+    }
 }

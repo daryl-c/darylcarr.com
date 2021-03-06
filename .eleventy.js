@@ -2,7 +2,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addWatchTarget("./src/scss/");
     eleventyConfig.addPassthroughCopy("./src/assets/fonts");
 
-    eleventyConfig.addCollection('blog', collection => {
+    eleventyConfig.addCollection('posts', collection => {
         return [...collection.getFilteredByGlob('./src/posts/*.md')].sort((a, b) => {
             const aDate = a.data.updatedAt || a.data.createdAt;
             const bDate = b.data.updatedAt || b.data.createdAt;
@@ -12,6 +12,10 @@ module.exports = (eleventyConfig) => {
                     ? 1
                     : -1;
         });
+    });
+
+    eleventyConfig.addCollection('featuredPosts', collection => {
+        return [...collection.getFilteredByGlob('./src/posts/*.md')].filter(post => post.data.featured)
     });
 
     return {
