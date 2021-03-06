@@ -23,20 +23,19 @@
 @import "helpers";
 @import "theme";
 @import "reset";
-@import "global";   
-@import "layout";
-@import "typography";
+@import "global";
 
+@import "utils/flow";
+@import "utils/panel";
 @import "utils/visually-hidden";
 @import "utils/wrapper";
 
-@import "blocks/hero";
-@import "blocks/pagination";
-@import "blocks/post-card";
-@import "blocks/post-list";
 @import "blocks/nav";
 @import "blocks/site-header";
 @import "blocks/site-footer";
 
-@import "pages/feed.scss";
-@import "pages/post.scss";
+.signature {
+    font-family: 'Homemade Apple', cursive;
+    font-size: 3rem;
+    color: $color-purple-dark;
+}

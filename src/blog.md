@@ -1,7 +1,7 @@
 ---
 title: "Posts"
 intro: "These are some posts I've written about what I'm currently learning about"
-layout: "layouts/feed.njk"
+layout: "layouts/base.njk"
 pagination:
   data: collections.blog
   size: 2

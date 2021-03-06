@@ -1,6 +1,6 @@
 ---
 title: "Posts"
-layout: 'layouts/feed.njk'
+layout: 'layouts/base.njk'
 pagination:
   data: collections
   size: 1

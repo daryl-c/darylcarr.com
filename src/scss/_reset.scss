@@ -1,4 +1,4 @@
-// Grabbed from https://unpkg.com/modern-css-reset@1.4.0/dist/reset.css
+// Taken from https://github.com/hankchizljaw/modern-css-reset
 
 /* Box sizing rules */
 *,
@@ -17,9 +17,7 @@ p,
 figure,
 blockquote,
 dl,
-dd,
-ul,
-ol {
+dd {
   margin: 0;
 }
 
@@ -27,6 +25,9 @@ ol {
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
 }
 
 /* Set core root defaults */

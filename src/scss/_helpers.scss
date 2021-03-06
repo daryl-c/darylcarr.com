@@ -7,13 +7,13 @@
 }
 
 @mixin media-query($size) {
-    @if $size == tab-port {
-      @media (min-width: $tab-port) { @content; }
-    } @else if $size == tab-land {
-      @media (min-width: $tab-land) { @content; }
-    } @else if $size == desktop-small {
-      @media (min-width: $desktop-small) { @content; }
-    } @else {
-        @error "Breakpoint [#{$size}] is an unsupported breakpoint.";
-    }
+  @if $size == tab-port {
+    @media (min-width: $breakpoint-tab-port) { @content; }
+  } @else if $size == tab-land {
+    @media (min-width: $tbreakpoint-tab-land) { @content; }
+  } @else if $size == desktop-small {
+    @media (min-width: $breakpoint-desktop-small) { @content; }
+  } @else {
+      @error "Breakpoint [#{$size}] is an unsupported breakpoint.";
   }
+}

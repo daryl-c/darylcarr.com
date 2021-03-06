@@ -1,18 +1,30 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-    <section class="hero">
-        <div class="wrapper">
-            <h1 class="hero__title">Learning, writing and creating with serverless and the JAMstack</h1>
+<section class="hero panel">
+    <div class="wrapper">
+        <div class="hero__inner flow">
+            <h1 class="hero__title">Do you want to learn more about building on the web?</h1>
+            <p class="hero__lede"><strong class="color-secondary">Me too!</strong> My name's Daryl and I'm a web developer who <em class="color-secondary">loves to solve business problems with code</em>. I'm fascinated by developers building and running successful software products online.</p>
+            <p>I write about:</p>
+            <ul class="flow">
+                <li>Applying my favourite technology choices like <em class="color-secondary">serverless</em> and the <em class="color-secondary">JAMstack</em> to real problems</li>
+                <li>Digging into web fundamentals</li>
+                <li>How to build and run successful software products</li>
+            </ul>
+            <p>I'll be <em class="color-secondary">exploring ideas, making mistakes and having fun...</em> hopefully. I don't have the answers but I'm looking forward to sharing what I learn as I go.</p>
+            <p>Thanks for visiting,</p>
+            <p class="signature">Daryl</p>
+        </div>  
+    </div>
+</section>
+<section class="posts panel">
+    <div class="wrapper">
+        <div class="posts__inner">
+            <h2>Favourite posts</h2>
+            <p>A list of a a few selected posts go here</p>
         </div>
-    </section>
-    <section class="posts">
-        <div class="wrapper">
-            <div class="posts__inner">
-                <h2>Writing</h2>
-                {% set postListItems = collections.blog.slice(0, 6) %}
-                {% include "partials/post-list.njk" %}
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
+
 {% endblock content %}

@@ -11,6 +11,8 @@
         type="font/truetype"
         crossOrigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <title>{{ title }}</title>
 </head>
@@ -22,8 +24,8 @@
                 <nav class="nav" aria-label="primary">
                     <ul class="nav__list" role="list">
                         {% for item in navigation.items %}
-                        <li>
-                            <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }} >{{ item.text }}</a>
+                        <li class="nav__list-item">
+                            <a class="nav__list-link" href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }} >{{ item.text }}</a>
                         </li>
                         {% endfor %}
                     </ul>
